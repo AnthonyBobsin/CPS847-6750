@@ -1,5 +1,5 @@
 language: ruby
-script: bundle exec rspec
+script: bundle exec rspec main_spec.rb
 
 deploy:
   provider: s3
