@@ -1,2 +1,12 @@
 language: ruby
-script: bundle exec rspec main_spec.rb
+script: bundle exec rspec
+
+deploy:
+  provider: s3
+  access_key_id: $AWS_ACCESS_KEY_ID
+  secret_access_key: $AWS_SECRET_ACCESS_KEY
+  bucket: cps847-6750
+  region: us-east-2
+  skip_cleanup: true
+  acl: public_read
+  local_dir: website
